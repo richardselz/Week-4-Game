@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
+	<style>
+		header {
+			color: white;
+			background-color: #C8742A;
+		}
+		.row > .col-xs-8 {
+			color: green;
+			background-color: #FAE7CA;
+		}
+		#random-number {
+			background-color: #55C87E;
+			font-size: 30px;
+			height: 80px;
+			color: #736985;
+		}
+		#scores {
+			background-color: #49FCFE;
+			height: 80px;
+		}
+		.current-score {
+			background-color: #2BA196;
+			color: white;
+		}
+		.crystal {
+			height: 80px;
+		}
+		#first-crystal {
+			background: yellow;
+		}
+		#second-crystal {
+			background: grey;
+		}
+		#third-crystal {
+			background: green;			
+		}
+		#fourth-crystal {
+			background: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<header class="row">
+					<div class="col-xs-6"><h1>Crystals Collector!</h1></div>
+				</header>
+				<div class="row">
+					<div class="col-xs-8">
+						<p>You will be given a random number at the start of the game.</p>
+						<p>There are four crystals below. By clicking on a crystal you will add a specific amount of p oints to your total score.</p>
+						<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+						<p>The value of each crystal is hidden from you until you click on it.</p>
+						<p>Each time when the game starts, the game will change the values of each crystal.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3" id="random-number">N/A</div>
+					<div class="col-xs-2" id="scores">
+						Wins: <span id="wins"></span><br/>
+						Losses: <span id="losses"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 crystal" id="first-crystal"></div>
+					<div class="col-xs-1 crystal" id="second-crystal"></div>
+					<div class="col-xs-1 crystal" id="third-crystal"></div>
+					<div class="col-xs-1 crystal" id="fourth-crystal"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3 current-score">
+						Your score is:
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3 current-score">
+						<h1><span id="current-value">N/A</span></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
