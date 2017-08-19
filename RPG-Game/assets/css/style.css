@@ -1,0 +1,15 @@
+.choose-character{
+	margin: 0 auto;
+	display: inline-block;
+}
+characters .character-name {
+	text-align: center;
+	border: 10px green solid;
+	display: inline-block;
+}
+characters:nth-child(odd) .character-name {
+	background-color: #dedede;
+}
+characters:nth-child(even) .character-name {
+	background-color: lightblue;
+}
