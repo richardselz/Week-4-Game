@@ -84,6 +84,7 @@ function updateCurrentScore(x){
 $(document).ready(function() {
 	reset();
 	$(".crystal").on("click", function(){
+		// console.log(this.value); //this doesn't work because the "values" are created within the dom
 		updateCurrentScore($(this).attr("value"));
 	})
 });
