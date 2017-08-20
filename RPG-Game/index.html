@@ -7,9 +7,65 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/javascript/game2.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/javascript/game3.js"></script>
 	<style>
-
+		span{
+			text-align: center;
+		}
+		#choose-character{
+			margin: 0;
+			padding: 0;
+		}
+		#player, .enemies {
+			height: 200px;
+			padding-top: 15px;
+		}
+		#player {
+			background: #C0D890;
+		}
+		.enemies {
+			background: #ED4337;
+		}
+		.character-name, .character-health{
+			font-weight: bold;
+			font-size: 15px;
+		}
+		#chosen-area {
+			background: #ccc;
+		}
+		#select-player, #select-enemy, #enemy-selected, #select-new-enemy, #winner, #lost {
+			text-align: center;
+			font-weight: bold;
+			font-size: 15px;
+		}
+		/* Change select-player and select-enemy from display: inline-block to none as well as change #please-choose background from green to red */
+		#select-player{
+			display: inline-block;
+			background-color: #C0D890;
+		}	
+		#select-enemy, #enemy-selected, #select-new-enemy, #winner, #lost{
+			display: none;
+			background: #ED4337;
+		}
+		#fight-area{
+			display: none;
+		}
+		#attack-container {
+			text-align: center;
+		}
+		#attack {
+			height: 200px;
+			font-size: 100px;
+			font-weight: bold;
+			line-height: 200px;
+			text-align: center;
+			color: #ED4337;
+			display: none;
+		}
+		footer {
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -18,15 +74,75 @@
 			<div class="col-xs-12">
 				<div class="row">
 					<div class="col-xs-12" id="choose-character">
-
+						<div class="col-xs-3 character-div" id="Earth">
+							<span class="character-name col-xs-12"></span>
+							<span class="character-image col-xs-12"></span>
+							<span class="character-health col-xs-12"></span>
+						</div>
+						<div class="col-xs-3 character-div" id="Mars">
+							<span class="character-name col-xs-12"></span>
+							<span class="character-image col-xs-12"></span>
+							<span class="character-health col-xs-12"></span>
+						</div>
+						<div class="col-xs-3 character-div" id="Pluto">
+							<span class="character-name col-xs-12"></span>
+							<span class="character-image col-xs-12"></span>
+							<span class="character-health col-xs-12"></span>
+						</div>
+						<div class="col-xs-3 character-div" id="Saturn">
+							<span class="character-name col-xs-12"></span>
+							<span class="character-image col-xs-12"></span>
+							<span class="character-health col-xs-12"></span>
+						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12">
-						The Chosen One:<br/>
+					<div class="col-xs-12" id="select-player">
+						Please Select the Character you would like to play as!
+					</div>
+					<div class="col-xs-12" id="select-enemy">
+						Please Select the Enemy you would like to play against!
+					</div>
+					<div class="col-xs-12" id="enemy-selected">
+						Your enemy has been selected; Now FIGHT!
+					</div>
+					<div class="col-xs-12" id="select-new-enemy">
+						You killed your enemy! Please select a new Enemy!
+					</div>
+					<div class="col-xs-12" id="winner">
+						<h1>YOU HAVE WON!</h1>
+					</div>
+					<div class="col-xs-12" id="lost">
+						<h1>GAME OVER!</h1>
+					</div>
 
+				</div>
+				<div class="row" id="fight-area">
+					<div class="col-xs-12" id="chosen-area">
+						<div class="row">
+							<div class="col-xs-4" id="player">
+								<span class="character-name col-xs-12"></span>
+								<span class="character-image col-xs-12"></span>
+								<span class="character-health col-xs-12"></span>
+							</div>
+							<div class="col-xs-4" id="attack-container">
+							<span id="attack">ATTACK!</span>
+							</div>
+							<div class="col-xs-4 enemies">
+								<span class="character-name col-xs-12"></span>
+								<span class="character-image col-xs-12"></span>
+								<span class="character-health col-xs-12"></span>
+							</div>
+						</div>
 					</div>
 				</div>
+				<footer>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="assets/images/credits.txt">credits</a>
+						</div>
+					</div>
+				</footer>
 			</div>
 		</div>
 	</div>
