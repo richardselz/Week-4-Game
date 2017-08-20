@@ -33,7 +33,7 @@ $(document).ready(function() {
 			name: "Pluto",
 			startAtk: 18,
 			startHealth: 80,
-			counterAtk: 180,
+			counterAtk: 18,
 			image: "assets/images/pluto-128.png",
 			bgColor: "grey",
 			alive: true,
@@ -100,7 +100,7 @@ var gameSetup = {
 				$(".enemies > .character-health").text(enemyHealth);
 				playerAttack = playerAttackOriginal + playerAttack;
 				console.log(playerAttack);
-			}else if(enemyHealth <= 0 && enemyJustDied){
+				if(enemyHealth <= 0 && enemyJustDied){
 				console.log("Enemy health below 0!");
 				$("#enemy-selected").hide();
 				$("#select-new-enemy").show();
@@ -108,14 +108,31 @@ var gameSetup = {
 				gameSetup.playerSelect();
 				enemyJustDied = false;
 				enemiesKilled++;
-				if(enemiesKilled === 3){
+					if(enemiesKilled === 3){
+						$("#select-new-enemy").hide();
+						$("#winner").show();
+					}
+				}else if(playerHealth <= 0){
 					$("#select-new-enemy").hide();
-					$("#winner").show();
+					$("#lost").show();
 				}
-			}else if(playerHealth <= 0){
-				$("#select-new-enemy").hide();
-				$("#lost").show();
 			}
+			// }else if(enemyHealth <= 0 && enemyJustDied){
+			// 	console.log("Enemy health below 0!");
+			// 	$("#enemy-selected").hide();
+			// 	$("#select-new-enemy").show();
+			// 	enemySelected = false;
+			// 	gameSetup.playerSelect();
+			// 	enemyJustDied = false;
+			// 	enemiesKilled++;
+			// 	if(enemiesKilled === 3){
+			// 		$("#select-new-enemy").hide();
+			// 		$("#winner").show();
+			// 	}
+			// }else if(playerHealth <= 0){
+			// 	$("#select-new-enemy").hide();
+			// 	$("#lost").show();
+			// }
 		});
 	},
 	populateCharacterDivs: function(){

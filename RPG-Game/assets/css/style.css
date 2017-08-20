@@ -1,15 +1,56 @@
-.choose-character{
-	margin: 0 auto;
-	display: inline-block;
-}
-characters .character-name {
+span{
 	text-align: center;
-	border: 10px green solid;
+}
+#choose-character{
+	margin: 0;
+	padding: 0;
+}
+#player, .enemies {
+	height: 200px;
+	padding-top: 15px;
+}
+#player {
+	background: #C0D890;
+}
+.enemies {
+	background: #ED4337;
+}
+.character-name, .character-health{
+	font-weight: bold;
+	font-size: 15px;
+}
+#chosen-area {
+	background: #ccc;
+}
+#select-player, #select-enemy, #enemy-selected, #select-new-enemy, #winner, #lost {
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+/* Change select-player and select-enemy from display: inline-block to none as well as change #please-choose background from green to red */
+#select-player{
 	display: inline-block;
+	background-color: #C0D890;
+}	
+#select-enemy, #enemy-selected, #select-new-enemy, #winner, #lost{
+	display: none;
+	background: #ED4337;
 }
-characters:nth-child(odd) .character-name {
-	background-color: #dedede;
+#fight-area{
+	display: none;
 }
-characters:nth-child(even) .character-name {
-	background-color: lightblue;
+#attack-container {
+	text-align: center;
+}
+#attack {
+	height: 200px;
+	font-size: 100px;
+	font-weight: bold;
+	line-height: 200px;
+	text-align: center;
+	color: #ED4337;
+	display: none;
+}
+footer {
+	text-align: center;
 }
