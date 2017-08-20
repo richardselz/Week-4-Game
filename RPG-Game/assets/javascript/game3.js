@@ -101,13 +101,13 @@ var gameSetup = {
 				playerAttack = playerAttackOriginal + playerAttack;
 				console.log(playerAttack);
 				if(enemyHealth <= 0 && enemyJustDied){
-				console.log("Enemy health below 0!");
-				$("#enemy-selected").hide();
-				$("#select-new-enemy").show();
-				enemySelected = false;
-				gameSetup.playerSelect();
-				enemyJustDied = false;
-				enemiesKilled++;
+					console.log("Enemy health below 0!");
+					$("#enemy-selected").hide();
+					$("#select-new-enemy").show();
+					enemySelected = false;
+					gameSetup.playerSelect();
+					enemyJustDied = false;
+					enemiesKilled++;
 					if(enemiesKilled === 3){
 						$("#select-new-enemy").hide();
 						$("#winner").show();
@@ -117,27 +117,10 @@ var gameSetup = {
 					$("#lost").show();
 				}
 			}
-			// }else if(enemyHealth <= 0 && enemyJustDied){
-			// 	console.log("Enemy health below 0!");
-			// 	$("#enemy-selected").hide();
-			// 	$("#select-new-enemy").show();
-			// 	enemySelected = false;
-			// 	gameSetup.playerSelect();
-			// 	enemyJustDied = false;
-			// 	enemiesKilled++;
-			// 	if(enemiesKilled === 3){
-			// 		$("#select-new-enemy").hide();
-			// 		$("#winner").show();
-			// 	}
-			// }else if(playerHealth <= 0){
-			// 	$("#select-new-enemy").hide();
-			// 	$("#lost").show();
-			// }
 		});
 	},
 	populateCharacterDivs: function(){
 		$("#Earth > .character-name").text(characters.Earth.name);
-		//$('myOjbect').css('background-image', 'url(' + imageUrl + ')');
 		$("#Earth > .character-image").html(gameSetup.imageEarth);
 		$("#Earth > .character-health").text(characters.Earth.startHealth);
 		$("#Mars > .character-name").text(characters.Mars.name);
@@ -157,25 +140,19 @@ var gameSetup = {
 			var chosenCharID = "#"+chosenChar;
 
 			if(!playerSelected){ //waiting for selection
-				// console.log("Clicks are working: " + $(this).attr("id"));
-				// console.log("The chosenChar is: " + chosenChar);
-				// console.log("The image link is: " + characters[chosenChar].image);
 				$("#fight-area").show();
 				$("#player > .character-name").text($(this).attr("id"));
 				$("#player > .character-image").html("<img src="+characters[chosenChar].image+" class=\"img-fluid\">");
 				$("#player > .character-health").text(characters[chosenChar].startHealth);
-				//$(chosenCharID).hide();
 				$(chosenCharID).css("visibility", "hidden");
 				$("#select-player").hide();
 				$("#select-enemy").show();
 				playerSelected = true;
 			}else if(!enemySelected){
-				// console.log("Inside the Enemey Selector!");
 				$("#attack").show();
 				$(".enemies > .character-name").text($(this).attr("id"));
 				$(".enemies > .character-image").html("<img src="+characters[chosenChar].image+" class=\"img-fluid\">");
 				$(".enemies > .character-health").text(characters[chosenChar].startHealth);
-				// $(chosenCharID).hide();
 				$(chosenCharID).css("visibility", "hidden");
 				$("#select-enemy").hide();
 				$("#select-new-enemy").hide();
@@ -187,8 +164,6 @@ var gameSetup = {
 					firstFight = false;
 				
 				console.log("playerSelected: " + playerSelected + " enemySelected: " + enemySelected);
-				// if(firstFight){
-				// }
 			}
 		});
 	}
