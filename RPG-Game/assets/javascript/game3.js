@@ -104,6 +104,9 @@ var gameSetup = {
 					console.log("Enemy health below 0!");
 					$("#enemy-selected").hide();
 					$("#select-new-enemy").show();
+					$(".enemies > .character-name").text("");
+					$(".enemies > .character-image").html("");
+					$(".enemies > .character-health").text("");
 					enemySelected = false;
 					gameSetup.playerSelect();
 					enemyJustDied = false;
