@@ -33,7 +33,7 @@ $(document).ready(function() {
 			name: "Pluto",
 			startAtk: 18,
 			startHealth: 80,
-			counterAtk: 180,
+			counterAtk: 18,
 			image: "assets/images/pluto-128.png",
 			bgColor: "grey",
 			alive: true,
