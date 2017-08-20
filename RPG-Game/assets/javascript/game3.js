@@ -92,10 +92,10 @@ var gameSetup = {
 			//if player dies, alert of death
 			//if enemy dies, set enemySelected = false and call gameSetup.playerSelect()
 			if(playerHealth > 0 && enemyHealth > 0 && playerSelected){
-				enemyHealth -= playerAttack;
 				if(enemyHealth > playerAttack){
 					playerHealth -= enemyAttack;
 				}
+				enemyHealth -= playerAttack;
 				$("#player > .character-health").text(playerHealth);
 				$(".enemies > .character-health").text(enemyHealth);
 				playerAttack = playerAttackOriginal + playerAttack;
